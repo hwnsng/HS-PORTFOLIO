@@ -6,7 +6,7 @@
   pointer-events: none;
   overflow: hidden;
   background: rgba(5, 7, 13, 0.42);
-  animation: intro-overlay-out 1000ms ease 2700ms forwards;
+  animation: intro-overlay-out 760ms ease 1540ms forwards;
 }
 
 .intro-center-glow {
@@ -20,7 +20,7 @@
   filter: blur(4px);
   opacity: 0;
   transform: translate(-50%, -50%) scale(0.3);
-  animation: intro-center-pop 1950ms cubic-bezier(0.2, 0.85, 0.22, 1) forwards;
+  animation: intro-center-pop 1280ms cubic-bezier(0.2, 0.85, 0.22, 1) forwards;
 }
 
 .intro-star-field {
@@ -30,7 +30,7 @@
   width: 1px;
   height: 1px;
   transform: translate(-50%, -50%);
-  animation: intro-field-spin 2550ms cubic-bezier(0.2, 0.85, 0.22, 1) forwards;
+  animation: intro-field-spin 1640ms cubic-bezier(0.2, 0.85, 0.22, 1) forwards;
 }
 
 .intro-star {

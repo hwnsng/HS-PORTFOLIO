@@ -4,12 +4,12 @@
 import { useEffect, useState } from "react";
 import type { CSSProperties } from "react";
 
-const stars = Array.from({ length: 84 }, (_, index) => {
+const stars = Array.from({ length: 60 }, (_, index) => {
   const angle = index * 17;
   const distance = 140 + (index % 8) * 48 + Math.floor(index / 8) * 20;
   const size = 3.2 + (index % 4) * 0.9;
-  const delay = (index % 12) * 0.04;
-  const duration = 2.15 + (index % 6) * 0.1;
+  const delay = (index % 10) * 0.035;
+  const duration = 1.36 + (index % 6) * 0.08;
 
   return { angle, delay, distance, duration, size };
 });
@@ -24,7 +24,7 @@ export function IntroStars() {
 
     window.scrollTo(0, 0);
 
-    const timer = window.setTimeout(() => setIsMounted(false), 3900);
+    const timer = window.setTimeout(() => setIsMounted(false), 2450);
     return () => window.clearTimeout(timer);
   }, []);
 
