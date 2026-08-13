@@ -5,9 +5,7 @@ Frontend Developer Kim HwanSeong portfolio.
 ## Tech Stack
 
 - Next.js
-- React
 - TypeScript
-- Tailwind CSS
 
 ## Getting Started
 
