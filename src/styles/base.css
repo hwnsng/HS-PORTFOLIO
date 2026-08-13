@@ -44,7 +44,7 @@ body::before {
   z-index: -2;
   pointer-events: none;
   content: "";
-  background: url("/assets/backgrounds/cold-night-sky.png") center center / cover no-repeat;
+  background: url("/assets/backgrounds/cold-night-sky.webp") center center / cover no-repeat;
 }
 
 body::after {

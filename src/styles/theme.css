@@ -102,7 +102,7 @@ body {
 }
 
 body::before {
-  background-image: url("/assets/backgrounds/cold-night-sky.png");
+  background-image: url("/assets/backgrounds/cold-night-sky.webp");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -110,7 +110,7 @@ body::before {
 }
 
 :root[data-theme="light"] body::before {
-  background-image: url("/assets/backgrounds/warm-sunset-sky.png");
+  background-image: url("/assets/backgrounds/warm-sunset-sky.webp");
 }
 
 body::after {

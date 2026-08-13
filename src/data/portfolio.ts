@@ -115,7 +115,7 @@ export const featuredProjects: FeaturedProject[] = [
     stack: ["Next.js", "TypeScript", "Axios", "Tailwind CSS"],
     github: "https://github.com/gbsw-gg/gbsw.gg-Client",
     website: "https://gbsw-gg.gbsw.hs.kr",
-    logo: "/assets/portfolio/gbsw_gg_logo.png",
+    logo: "/assets/portfolio/gbsw_gg_logo.webp",
     points: [
       "학생, 도우미, 관리자 역할별 화면을 분리하고 useRequireRole 훅으로 페이지 접근을 제어했습니다.",
       "Axios 인터셉터와 요청 대기열로 refresh API 중복 호출을 제거했습니다.",
@@ -160,7 +160,7 @@ export const featuredProjects: FeaturedProject[] = [
     team: "Web Frontend 1명, Backend 2명, AI 1명, iOS 1명",
     stack: ["React", "TypeScript", "Axios", "Tailwind CSS", "Lighthouse"],
     github: "https://github.com/hwnsng/zipchak-web-frontend",
-    logo: "/assets/portfolio/zipchak_logo.png",
+    logo: "/assets/portfolio/zipchak_logo.webp",
     points: [
       "Tailwind CSS 기반 컴포넌트 단위 스타일 구조와 디자인 시스템을 구축했습니다.",
       "액세스 토큰 만료 시 자동 갱신 로직과 전역 에러 처리 흐름을 설계했습니다.",
@@ -205,7 +205,7 @@ export const featuredProjects: FeaturedProject[] = [
     team: "Web Frontend 1명, Backend 3명, AI 1명",
     stack: ["Next.js", "TypeScript", "MediaPipe", "WebRTC", "Zustand"],
     github: "https://github.com/hwnsng/gesture_client",
-    logo: "/assets/portfolio/gesture_logo.png",
+    logo: "/assets/portfolio/gesture_logo.webp",
     points: [
       "인증, 영상통화, 친구, 학습 도메인별 App Router 구조와 Zustand 스토어를 설계했습니다.",
       "react-webcam과 MediaPipe Holistic을 연결해 손/포즈 랜드마크 추출 파이프라인을 구현했습니다.",

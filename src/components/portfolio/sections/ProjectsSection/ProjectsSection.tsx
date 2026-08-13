@@ -109,7 +109,7 @@ function ProjectCard({ project, onSelect }: { project: FeaturedProject; onSelect
     >
       <div className="project-main">
         <div className="project-title-row">
-          <img src={project.logo} alt={`${project.name} logo`} />
+          <Image src={project.logo} alt={`${project.name} logo`} width={58} height={58} sizes="58px" />
           <div>
             <span>{project.label}</span>
             <h3>{project.name}</h3>
