@@ -1,0 +1,152 @@
+/* 왼쪽 HS 로고와 사이드 네비게이션 스타일 */
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 42px;
+  z-index: 20;
+  width: 0;
+}
+
+.brand {
+  position: absolute;
+  top: 26px;
+  left: 0;
+  background: linear-gradient(135deg, #ffffff 0%, #dcecff 38%, #f5d995 66%, #ffffff 100%);
+  background-clip: text;
+  color: transparent;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 0;
+  -webkit-background-clip: text;
+  text-shadow: 0 1px 18px rgba(0, 0, 0, 0.7);
+  transition: filter 180ms ease, transform 180ms ease;
+}
+
+.brand.is-active {
+  filter: drop-shadow(0 0 16px rgba(245, 217, 149, 0.42));
+  transform: scale(1.08);
+}
+
+.mobile-menu-button,
+.mobile-menu-backdrop {
+  display: none;
+}
+
+.nav {
+  position: fixed;
+  top: var(--nav-top, 50vh);
+  left: 42px;
+  z-index: 19;
+  display: grid;
+  gap: 14px;
+  align-items: start;
+  background: transparent;
+  transition: top 80ms linear;
+}
+
+.nav a {
+  position: relative;
+  min-height: auto;
+  padding: 0;
+  background: var(--nav-gradient);
+  background-clip: text;
+  color: transparent;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.theme-toggle {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  margin-top: 8px;
+  padding: 0;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--accent-strong) 42%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--panel) 48%, transparent);
+  color: var(--accent-strong);
+  cursor: pointer;
+  font: inherit;
+  backdrop-filter: blur(8px);
+  transition: background 180ms ease, border-color 180ms ease, color 180ms ease, filter 180ms ease, transform 180ms ease;
+}
+
+.theme-toggle svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.theme-toggle:hover {
+  border-color: color-mix(in srgb, var(--accent-strong) 76%, transparent);
+  background: color-mix(in srgb, var(--panel-strong) 68%, transparent);
+  color: var(--foreground);
+  filter: drop-shadow(0 0 16px rgba(245, 217, 149, 0.28));
+  transform: scale(1.08);
+}
+
+.nav a::before {
+  position: absolute;
+  top: 50%;
+  left: -14px;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: #f5d995;
+  box-shadow: 0 0 14px rgba(245, 217, 149, 0.72), 0 0 22px rgba(159, 210, 255, 0.32);
+  content: "";
+  opacity: 0;
+  transform: translateY(-50%) scale(0.4);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.nav a:hover {
+  opacity: 0.72;
+  transform: translateX(4px);
+}
+
+.nav a.is-active {
+  opacity: 1;
+  transform: translateX(7px);
+}
+
+.nav a.is-active::before {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+}
+
+main {
+  overflow: hidden;
+}
+
+@media (min-width: 1920px) {
+  .site-header {
+    left: 56px;
+  }
+
+  .brand {
+    font-size: 31px;
+  }
+
+  .nav {
+    left: 56px;
+    gap: 18px;
+  }
+
+  .nav a {
+    font-size: 16px;
+  }
+
+  .nav a::before {
+    left: -18px;
+    width: 7px;
+    height: 7px;
+  }
+}
+

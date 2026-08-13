@@ -1,0 +1,73 @@
+/* 이메일 중심 Contact 섹션 스타일 */
+.contact-section {
+  display: block;
+  padding-bottom: 220px;
+  text-align: center;
+}
+
+.contact-section .section-head {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.contact-section .section-head p {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.contact-section p {
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 22px;
+}
+
+.contact-list {
+  position: relative;
+  display: grid;
+  gap: 20px;
+  justify-items: center;
+  margin: 30px 0 0;
+  font-style: normal;
+}
+
+.contact-list::before {
+  position: relative;
+  display: block;
+  width: min(280px, 64%);
+  height: 1px;
+  background: linear-gradient(90deg, rgba(245, 217, 149, 0.58), rgba(159, 210, 255, 0.3), transparent);
+  content: "";
+}
+
+.contact-email {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #ffffff;
+  font-size: clamp(32px, 4.4vw, 64px);
+  font-weight: 900;
+  line-height: 1.18;
+  overflow-wrap: anywhere;
+  transition: color 180ms ease, filter 180ms ease, transform 180ms ease;
+}
+
+.contact-email:hover {
+  color: var(--accent-strong);
+  filter: drop-shadow(0 0 24px rgba(245, 217, 149, 0.2));
+  transform: translateX(8px);
+}
+
+.contact-note {
+  max-width: 920px;
+  margin: 0;
+  color: rgba(245, 247, 251, 0.62);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.75;
+}
+

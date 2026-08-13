@@ -1,0 +1,212 @@
+/* 기술 스택 배치와 기술 상세 모달 스타일 */
+.split-section {
+  position: relative;
+}
+
+.split-section .section-head h2 {
+  background: linear-gradient(135deg, #ffffff 0%, #dcecff 34%, #f5d995 62%, #ffffff 100%);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.skill-orbit {
+  position: relative;
+  width: min(920px, 100%);
+  height: 560px;
+  margin: 86px auto 0;
+  padding: 0;
+  background: transparent;
+}
+
+.skill-orbit::before {
+  display: none;
+}
+
+.skill-item {
+  position: absolute;
+  display: inline-flex;
+  width: auto;
+  min-width: 0;
+  min-height: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: rgba(245, 247, 251, 0.9);
+  cursor: pointer;
+  font: inherit;
+  text-align: center;
+  box-shadow: none;
+  transform: translate(-50%, -50%);
+  transition: color 180ms ease, filter 180ms ease, transform 180ms ease;
+}
+
+.skill-item:hover {
+  color: #ffffff;
+  filter: drop-shadow(0 0 24px rgba(159, 210, 255, 0.24));
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+.skill-item h3 {
+  margin: 0;
+  color: rgba(245, 247, 251, 0.86);
+  font-size: clamp(22px, 3.4vw, 42px);
+  line-height: 1.18;
+  text-shadow: 0 14px 42px rgba(0, 0, 0, 0.48);
+  white-space: nowrap;
+}
+
+.skill-item:nth-child(1) {
+  top: 13%;
+  left: 18%;
+}
+
+.skill-item:nth-child(2) {
+  top: 16%;
+  left: 55%;
+}
+
+.skill-item:nth-child(3) {
+  top: 22%;
+  left: 82%;
+}
+
+.skill-item:nth-child(4) {
+  top: 38%;
+  left: 35%;
+}
+
+.skill-item:nth-child(5) {
+  top: 47%;
+  left: 68%;
+}
+
+.skill-item:nth-child(6) {
+  top: 62%;
+  left: 12%;
+}
+
+.skill-item:nth-child(7) {
+  top: 71%;
+  left: 48%;
+}
+
+.skill-item:nth-child(8) {
+  top: 75%;
+  left: 84%;
+}
+
+.skill-item:nth-child(9) {
+  top: 94%;
+  left: 30%;
+}
+
+.skill-item:nth-child(10) {
+  top: 92%;
+  left: 64%;
+}
+
+.skill-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow-y: auto;
+  padding: 24px;
+  background: rgba(5, 7, 13, 0.76);
+  backdrop-filter: blur(9px);
+}
+
+.skill-modal {
+  width: min(860px, 100%);
+  margin: 32px 0;
+  padding: 46px;
+  background:
+    linear-gradient(135deg, rgba(7, 11, 21, 0.96), rgba(7, 11, 21, 0.68) 60%, rgba(7, 11, 21, 0.9)),
+    radial-gradient(circle at 16% 0%, rgba(245, 217, 149, 0.15), transparent 36%);
+  box-shadow: 0 34px 110px rgba(0, 0, 0, 0.46);
+}
+
+.skill-modal-back-button {
+  position: fixed;
+  top: 28px;
+  left: 28px;
+  z-index: 70;
+  padding: 10px 0;
+  border: 0;
+  background: transparent;
+  color: #ffffff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 900;
+  transition: color 160ms ease, transform 160ms ease;
+}
+
+.skill-modal-back-button:hover {
+  color: var(--accent-strong);
+  transform: translateX(-4px);
+}
+
+.skill-modal-head span {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.skill-modal-head h2 {
+  margin: 12px 0 10px;
+  padding-bottom: 0.18em;
+  background: linear-gradient(135deg, #ffffff 0%, #dcecff 34%, #f5d995 68%, #ffffff 100%);
+  background-clip: text;
+  color: transparent;
+  font-size: clamp(44px, 7vw, 88px);
+  font-weight: 900;
+  line-height: 1.08;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.skill-modal-head p,
+.skill-modal-summary,
+.skill-modal-list li {
+  color: rgba(245, 247, 251, 0.8);
+  font-size: 16px;
+  line-height: 1.82;
+}
+
+.skill-modal-summary {
+  margin-top: 28px;
+}
+
+.skill-modal-projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.skill-modal-projects strong {
+  padding: 8px 11px;
+  background: rgba(245, 217, 149, 0.08);
+  color: #ffffff;
+  font-size: 13px;
+}
+
+.skill-modal-list {
+  display: grid;
+  gap: 13px;
+  margin: 32px 0 0;
+  padding-left: 20px;
+}
+
+.skill-modal-list li::marker {
+  color: var(--accent);
+}
+

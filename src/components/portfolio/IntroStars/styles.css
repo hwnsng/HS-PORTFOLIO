@@ -1,0 +1,101 @@
+/* 사이트 진입 별 회전 인트로 애니메이션 스타일 */
+.intro-stars {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+  overflow: hidden;
+  background: rgba(5, 7, 13, 0.42);
+  animation: intro-overlay-out 1000ms ease 2700ms forwards;
+}
+
+.intro-center-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 140px;
+  height: 140px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(245, 247, 251, 0.7), rgba(159, 210, 255, 0.26) 36%, transparent 70%);
+  filter: blur(4px);
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.3);
+  animation: intro-center-pop 1950ms cubic-bezier(0.2, 0.85, 0.22, 1) forwards;
+}
+
+.intro-star-field {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: 1px;
+  transform: translate(-50%, -50%);
+  animation: intro-field-spin 2550ms cubic-bezier(0.2, 0.85, 0.22, 1) forwards;
+}
+
+.intro-star {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--star-size);
+  height: var(--star-size);
+  border-radius: 999px;
+  background: rgba(245, 247, 251, 0.92);
+  box-shadow:
+    0 0 12px rgba(245, 247, 251, 0.78),
+    0 0 22px rgba(159, 210, 255, 0.72),
+    0 0 34px rgba(245, 217, 149, 0.26);
+  opacity: 0;
+  transform: rotate(var(--star-angle)) translateX(0) scale(0.35);
+  animation: intro-star-burst var(--star-duration) cubic-bezier(0.16, 0.85, 0.22, 1) var(--star-delay) forwards;
+}
+
+@keyframes intro-star-burst {
+  0% {
+    opacity: 0;
+    transform: rotate(var(--star-angle)) translateX(0) scale(0.35);
+  }
+
+  18% {
+    opacity: 1;
+  }
+
+  72% {
+    opacity: 0.82;
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(calc(var(--star-angle) + 120deg)) translateX(var(--star-distance)) scale(1);
+  }
+}
+
+@keyframes intro-field-spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) scale(0.75);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(145deg) scale(1.05);
+  }
+}
+
+@keyframes intro-center-pop {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.3);
+  }
+
+  22% {
+    opacity: 0.9;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(2.1);
+  }
+}
+@keyframes intro-overlay-out {
+  to {
+    opacity: 0;
+  }
+}

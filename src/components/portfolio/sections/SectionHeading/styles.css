@@ -1,0 +1,28 @@
+/* 각 섹션 공통 제목 스타일 */
+.section-head {
+  max-width: 760px;
+  margin-bottom: 34px;
+}
+
+.section-head h2 {
+  margin-bottom: 0;
+  background: linear-gradient(135deg, #ffffff 0%, #dcecff 34%, #f5d995 62%, #ffffff 100%);
+  background-clip: text;
+  color: transparent;
+  font-size: clamp(34px, 5vw, 62px);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-head p {
+  max-width: 620px;
+  margin: 14px 0 0;
+  color: rgba(245, 247, 251, 0.72);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.7;
+}
+

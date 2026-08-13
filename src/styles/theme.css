@@ -1,0 +1,373 @@
+/* 다크/라이트 모드 전환에 사용하는 테마 색상과 부드러운 전환 스타일 */
+:root {
+  --text-strong: #ffffff;
+  --text-body: rgba(245, 247, 251, 0.82);
+  --text-soft: rgba(245, 247, 251, 0.68);
+  --surface-soft: rgba(7, 11, 21, 0.9);
+  --surface-faint: rgba(7, 11, 21, 0.5);
+  --surface-line: rgba(255, 255, 255, 0.14);
+  --modal-backdrop: rgba(5, 7, 13, 0.76);
+  --modal-surface: linear-gradient(135deg, rgba(7, 11, 21, 0.96), rgba(7, 11, 21, 0.72) 56%, rgba(7, 11, 21, 0.9));
+  --title-gradient: linear-gradient(135deg, #ffffff 0%, #dcecff 34%, #f5d995 62%, #ffffff 100%);
+  --nav-gradient: linear-gradient(135deg, #ffffff 0%, #dcecff 42%, #f5d995 72%, #ffffff 100%);
+  --background-overlay:
+    linear-gradient(180deg, rgba(5, 7, 13, 0.18), rgba(5, 7, 13, 0.22) 46%, rgba(5, 7, 13, 0.28) 100%),
+    radial-gradient(circle at 50% 0%, rgba(159, 210, 255, 0.16), transparent 34%),
+    linear-gradient(90deg, rgba(5, 7, 13, 0.28), transparent 30%, transparent 70%, rgba(5, 7, 13, 0.28));
+}
+
+:root[data-theme="light"] {
+  --background: #fff3df;
+  --foreground: #21160f;
+  --muted: rgba(42, 27, 18, 0.76);
+  --line: rgba(70, 39, 23, 0.28);
+  --panel: rgba(113, 61, 31, 0.14);
+  --panel-strong: rgba(105, 55, 28, 0.2);
+  --accent: #78371f;
+  --accent-strong: #a64d25;
+  --text-strong: #21160f;
+  --text-body: rgba(31, 20, 13, 0.9);
+  --text-soft: rgba(47, 31, 20, 0.78);
+  --surface-soft: rgba(117, 63, 31, 0.2);
+  --surface-faint: rgba(102, 54, 28, 0.16);
+  --surface-line: rgba(77, 42, 25, 0.34);
+  --modal-backdrop: rgba(72, 43, 25, 0.36);
+  --modal-surface: linear-gradient(135deg, rgba(250, 225, 191, 0.96), rgba(230, 174, 122, 0.72) 58%, rgba(247, 213, 171, 0.9));
+  --title-gradient: linear-gradient(135deg, #21160f 0%, #6b2d18 34%, #a64d25 68%, #2d1a10 100%);
+  --nav-gradient: linear-gradient(135deg, #21160f 0%, #6b2d18 44%, #a64d25 76%, #2d1a10 100%);
+  --background-overlay:
+    linear-gradient(180deg, rgba(255, 246, 232, 0.04), rgba(255, 238, 211, 0.12) 48%, rgba(255, 230, 198, 0.2) 100%),
+    radial-gradient(circle at 50% 0%, rgba(255, 244, 214, 0.32), transparent 34%),
+    linear-gradient(90deg, rgba(115, 66, 39, 0.12), transparent 30%, transparent 70%, rgba(115, 66, 39, 0.12));
+}
+
+html,
+body,
+body::before,
+body::after,
+.brand,
+.nav a,
+.theme-toggle,
+.social-rail,
+.social-rail a,
+.social-rail span,
+.section-head h2,
+.section-head p,
+.hero-title,
+.hero-scroll-cue span,
+.achievement-card,
+.achievement-card strong,
+.achievement-card > div,
+.achievement-card h3,
+.achievement-card p,
+.project-item,
+.project-main p,
+.project-detail li,
+.project-title-row h3,
+.project-links a,
+.compact-card,
+.compact-card h3,
+.compact-card p,
+.stack-list span,
+.metric-grid span,
+.skill-item h3,
+.timeline-row p,
+.timeline-row small,
+.timeline-badge,
+.contact-email,
+.contact-note,
+.project-modal,
+.skill-modal,
+.achievement-modal,
+.project-modal-backdrop,
+.skill-modal-backdrop,
+.achievement-modal-backdrop,
+.project-image-viewer {
+  transition:
+    background 520ms ease,
+    background-color 520ms ease,
+    background-image 520ms ease,
+    border-color 520ms ease,
+    color 520ms ease,
+    opacity 260ms ease,
+    filter 520ms ease,
+    box-shadow 520ms ease,
+    text-shadow 520ms ease,
+    transform 180ms ease;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+body::before {
+  background-image: url("/assets/backgrounds/cold-night-sky.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 1;
+}
+
+:root[data-theme="light"] body::before {
+  background-image: url("/assets/backgrounds/warm-sunset-sky.png");
+}
+
+body::after {
+  background: var(--background-overlay);
+}
+
+.brand,
+.nav a,
+.section-head h2,
+.hero-title,
+.achievement-card strong,
+.etc-project-section h3,
+.split-section .section-head h2,
+.skill-modal-head h2,
+.project-modal-head h2 {
+  background-image: var(--nav-gradient);
+}
+
+.section-head h2,
+.hero-title,
+.achievement-card strong,
+.split-section .section-head h2,
+.skill-modal-head h2,
+.project-modal-head h2 {
+  background-image: var(--title-gradient);
+}
+
+.section-head p,
+.achievement-card p,
+.project-main p,
+.project-detail li,
+.compact-card p,
+.etc-project-section p,
+.skill-modal-head p,
+.skill-modal-summary,
+.skill-modal-list li,
+.project-modal-head p,
+.project-modal-overview p,
+.project-modal-section li,
+.achievement-modal p,
+.achievement-note-block li,
+.contact-note,
+.timeline-row small {
+  color: var(--text-body);
+}
+
+.achievement-card h3,
+.project-title-row h3,
+.compact-card h3,
+.etc-project-section h3,
+.project-modal-section h3,
+.project-modal-result h3,
+.project-modal-gallery h3,
+.skill-item h3,
+.skill-modal-projects strong,
+.timeline-row p,
+.contact-email,
+.project-links a,
+.project-modal-result strong,
+.achievement-note-block h4 {
+  color: var(--text-strong);
+}
+
+.project-meta,
+.compact-card span,
+.timeline-row time,
+.project-modal-gallery figcaption,
+.achievement-image-grid figcaption {
+  color: var(--text-soft);
+}
+
+.project-links a,
+.stack-list span,
+.metric-grid span,
+.project-modal-stack span,
+.activity-year-tabs button,
+.timeline-badge,
+.skill-modal-projects strong {
+  background: var(--surface-faint);
+  border-color: var(--surface-line);
+}
+
+.achievement-card > div {
+  background: linear-gradient(90deg, var(--surface-soft), color-mix(in srgb, var(--surface-soft) 32%, transparent) 78%, transparent);
+}
+
+.achievement-card:nth-child(even) > div {
+  background: linear-gradient(270deg, var(--surface-soft), color-mix(in srgb, var(--surface-soft) 32%, transparent) 78%, transparent);
+}
+
+.project-modal,
+.skill-modal {
+  background:
+    var(--modal-surface),
+    radial-gradient(circle at 80% 0%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 34%);
+}
+
+.project-modal-backdrop,
+.skill-modal-backdrop,
+.achievement-modal-backdrop {
+  background: var(--modal-backdrop);
+}
+
+:root[data-theme="light"] .intro-stars {
+  background: rgba(255, 237, 207, 0.38);
+}
+
+:root[data-theme="light"] .intro-star {
+  background: rgba(255, 247, 229, 0.94);
+  box-shadow:
+    0 0 12px rgba(255, 247, 229, 0.78),
+    0 0 22px rgba(255, 185, 111, 0.64),
+    0 0 34px rgba(155, 76, 37, 0.24);
+}
+
+:root[data-theme="light"] .project-title-row img {
+  background: rgba(255, 250, 241, 0.88);
+}
+
+:root[data-theme="light"] .project-title-row h3,
+:root[data-theme="light"] .compact-card h3,
+:root[data-theme="light"] .etc-project-section h3,
+:root[data-theme="light"] .project-modal-section h3,
+:root[data-theme="light"] .project-modal-result h3,
+:root[data-theme="light"] .project-modal-gallery h3,
+:root[data-theme="light"] .achievement-card h3,
+:root[data-theme="light"] .timeline-row p,
+:root[data-theme="light"] .contact-email {
+  color: #5d2816;
+  text-shadow: 0 10px 28px rgba(255, 244, 226, 0.36);
+}
+
+:root[data-theme="light"] .project-main p,
+:root[data-theme="light"] .project-detail li,
+:root[data-theme="light"] .compact-card p,
+:root[data-theme="light"] .etc-project-section p,
+:root[data-theme="light"] .project-modal-head p,
+:root[data-theme="light"] .project-modal-overview p,
+:root[data-theme="light"] .project-modal-section li,
+:root[data-theme="light"] .achievement-card p,
+:root[data-theme="light"] .section-head p,
+:root[data-theme="light"] .timeline-row small,
+:root[data-theme="light"] .contact-note {
+  color: var(--text-body);
+  font-weight: 700;
+}
+
+:root[data-theme="light"] .project-title-row span,
+:root[data-theme="light"] .project-modal-head span,
+:root[data-theme="light"] .project-modal-overview strong,
+:root[data-theme="light"] .detail-hover-cue {
+  color: #7b3218;
+}
+
+:root[data-theme="light"] .stack-list span,
+:root[data-theme="light"] .metric-grid span,
+:root[data-theme="light"] .project-modal-stack span,
+:root[data-theme="light"] .project-modal-result strong,
+:root[data-theme="light"] .project-links a,
+:root[data-theme="light"] .activity-year-tabs button,
+:root[data-theme="light"] .timeline-badge,
+:root[data-theme="light"] .skill-modal-projects strong {
+  border: 1px solid rgba(68, 37, 22, 0.26);
+  background: rgba(97, 52, 29, 0.16);
+  color: #26170f;
+  box-shadow: inset 0 1px 0 rgba(255, 240, 214, 0.18);
+}
+
+:root[data-theme="light"] .metric-grid span,
+:root[data-theme="light"] .project-modal-result strong {
+  color: #743018;
+  background: rgba(120, 55, 31, 0.2);
+}
+
+:root[data-theme="light"] .activity-year-tabs button:hover,
+:root[data-theme="light"] .activity-year-tabs button.is-active {
+  border-color: rgba(113, 51, 24, 0.52);
+  background: rgba(113, 51, 24, 0.24);
+  color: #21160f;
+}
+
+:root[data-theme="light"] .timeline-badge {
+  color: #5e2b18;
+}
+
+:root[data-theme="light"] .timeline-badge.is-award {
+  border-color: rgba(126, 58, 28, 0.44);
+  background: rgba(126, 58, 28, 0.2);
+  color: #632714;
+}
+
+:root[data-theme="light"] .timeline-badge.is-license {
+  border-color: rgba(80, 68, 126, 0.38);
+  background: rgba(80, 68, 126, 0.15);
+  color: #34295d;
+}
+
+:root[data-theme="light"] .achievement-card > div {
+  border-left-color: rgba(80, 43, 24, 0.36);
+  background: linear-gradient(90deg, rgba(113, 61, 31, 0.22), rgba(113, 61, 31, 0.08) 78%, transparent);
+}
+
+:root[data-theme="light"] .achievement-card:nth-child(even) > div {
+  border-right-color: rgba(80, 43, 24, 0.36);
+  background: linear-gradient(270deg, rgba(113, 61, 31, 0.22), rgba(113, 61, 31, 0.08) 78%, transparent);
+}
+
+:root[data-theme="light"] .project-item,
+:root[data-theme="light"] .compact-card {
+  border-image: linear-gradient(135deg, rgba(62, 33, 20, 0.62) 0%, rgba(128, 62, 30, 0.5) 44%, rgba(200, 116, 62, 0.48) 72%, rgba(62, 33, 20, 0.34) 100%) 1;
+}
+
+:root[data-theme="light"] .project-modal,
+:root[data-theme="light"] .skill-modal {
+  box-shadow: 0 34px 110px rgba(69, 39, 24, 0.28);
+}
+
+:root[data-theme="light"] .social-rail a,
+:root[data-theme="light"] .project-image-back-button,
+:root[data-theme="light"] .project-modal-back-button,
+:root[data-theme="light"] .skill-modal-back-button,
+:root[data-theme="light"] .achievement-modal-back-button {
+  color: var(--text-strong);
+}
+
+:root[data-theme="light"] .social-rail {
+  background: transparent;
+}
+
+:root[data-theme="light"] .social-rail a {
+  color: #5d2816;
+}
+
+:root[data-theme="light"] .social-rail a:hover {
+  color: #21160f;
+}
+
+:root[data-theme="light"] .social-rail svg {
+  filter: drop-shadow(0 6px 16px rgba(85, 42, 19, 0.32));
+}
+
+:root[data-theme="light"] .social-rail span {
+  background: linear-gradient(180deg, rgba(93, 40, 22, 0.76), rgba(166, 77, 37, 0.4), rgba(93, 40, 22, 0.72));
+}
+
+:root[data-theme="light"] .hero-scroll-cue span {
+  border-color: color-mix(in srgb, var(--text-strong) 82%, transparent);
+}
+
+:root[data-theme="light"] .project-image-viewer {
+  background: rgba(255, 244, 225, 0.94);
+}
+
+:root[data-theme="light"] .mobile-menu-button {
+  background: rgba(255, 244, 225, 0.72);
+}
+
+:root[data-theme="light"] .mobile-menu-button span {
+  background: var(--text-strong);
+}

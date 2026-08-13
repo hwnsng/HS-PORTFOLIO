@@ -1,0 +1,81 @@
+/* 연도별 활동 및 수상 이력 스타일 */
+.activity-year-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: -10px 0 34px;
+}
+
+.activity-year-tabs button {
+  min-width: 82px;
+  min-height: 40px;
+  border: 1px solid var(--line);
+  background: rgba(7, 11, 21, 0.9);
+  color: rgba(245, 247, 251, 0.76);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 900;
+  transition: border-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.activity-year-tabs button:hover,
+.activity-year-tabs button.is-active {
+  border-color: rgba(159, 210, 255, 0.5);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.timeline {
+  border-top: 1px solid var(--line);
+}
+
+.timeline-row {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+  min-height: 96px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.timeline-row p {
+  margin: 0;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.timeline-badge {
+  display: inline-flex;
+  min-height: 26px;
+  align-items: center;
+  margin-bottom: 8px;
+  padding: 5px 9px;
+  border: 1px solid rgba(240, 196, 106, 0.32);
+  background: rgba(7, 11, 21, 0.9);
+  color: var(--accent-strong);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.timeline-badge.is-award {
+  border-color: rgba(125, 219, 255, 0.38);
+  color: #7ddbff;
+}
+
+.timeline-badge.is-license {
+  border-color: rgba(165, 140, 255, 0.4);
+  color: #c7b7ff;
+}
+
+.timeline-row small {
+  display: block;
+  max-width: 720px;
+  margin-top: 8px;
+  color: rgba(245, 247, 251, 0.68);
+  font-size: 13px;
+  line-height: 1.72;
+}
+

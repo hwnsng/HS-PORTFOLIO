@@ -1,0 +1,137 @@
+/* 스크롤 진입 시 섹션과 콘텐츠를 등장시키는 공통 reveal 애니메이션 */
+[data-reveal] {
+  opacity: 0;
+  filter: blur(9px);
+  transform: translate3d(0, 42px, 0) scale(0.985);
+  transition:
+    opacity 900ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    filter 900ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    transform 1000ms cubic-bezier(0.16, 0.84, 0.22, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, filter, transform;
+}
+
+[data-reveal="left"] {
+  transform: translate3d(-58px, 18px, 0) scale(0.985);
+}
+
+[data-reveal="right"] {
+  transform: translate3d(58px, 18px, 0) scale(0.985);
+}
+
+[data-reveal="scale"] {
+  transform: translate3d(0, 28px, 0) scale(0.9);
+}
+
+[data-reveal="soft"] {
+  transform: translate3d(0, 26px, 0);
+}
+
+[data-reveal].is-revealed {
+  opacity: 1;
+  filter: blur(0);
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+.achievement-card[data-reveal].is-revealed:hover {
+  transform: translateY(-4px) translateX(5px);
+}
+
+.achievement-card:nth-child(even)[data-reveal].is-revealed:hover {
+  transform: translateY(-4px) translateX(-5px);
+}
+
+.project-item[data-reveal].is-revealed:hover {
+  transform: scale(1.018);
+}
+
+.compact-card[data-reveal].is-revealed:hover {
+  transform: scale(1.025);
+}
+
+.skill-item[data-reveal] {
+  transform: translate(-50%, calc(-50% + 34px)) scale(0.92);
+}
+
+.skill-item[data-reveal].is-revealed {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.skill-item[data-reveal].is-revealed:hover {
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+.section-head[data-reveal] {
+  transition-duration: 1050ms;
+}
+
+.achievement-card:nth-child(1),
+.project-item:nth-child(1),
+.timeline-row:nth-child(1) {
+  --reveal-delay: 80ms;
+}
+
+.achievement-card:nth-child(2),
+.project-item:nth-child(2),
+.timeline-row:nth-child(2) {
+  --reveal-delay: 170ms;
+}
+
+.achievement-card:nth-child(3),
+.project-item:nth-child(3),
+.timeline-row:nth-child(3) {
+  --reveal-delay: 260ms;
+}
+
+.compact-card:nth-child(1),
+.skill-item:nth-child(1),
+.timeline-row:nth-child(4) {
+  --reveal-delay: 90ms;
+}
+
+.compact-card:nth-child(2),
+.skill-item:nth-child(2),
+.timeline-row:nth-child(5) {
+  --reveal-delay: 150ms;
+}
+
+.compact-card:nth-child(3),
+.skill-item:nth-child(3),
+.timeline-row:nth-child(6) {
+  --reveal-delay: 210ms;
+}
+
+.skill-item:nth-child(4),
+.timeline-row:nth-child(7) {
+  --reveal-delay: 270ms;
+}
+
+.skill-item:nth-child(5),
+.timeline-row:nth-child(8) {
+  --reveal-delay: 330ms;
+}
+
+.skill-item:nth-child(6),
+.timeline-row:nth-child(9) {
+  --reveal-delay: 390ms;
+}
+
+.skill-item:nth-child(7) {
+  --reveal-delay: 450ms;
+}
+
+.skill-item:nth-child(8) {
+  --reveal-delay: 510ms;
+}
+
+.skill-item:nth-child(9) {
+  --reveal-delay: 570ms;
+}
+
+.skill-item:nth-child(10) {
+  --reveal-delay: 630ms;
+}
+
+.contact-list[data-reveal] {
+  transition-delay: 140ms;
+}
